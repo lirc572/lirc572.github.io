@@ -1,0 +1,97 @@
+<% if (is_home()){ %>
+<div class="posts">
+  <ul>
+    <% page.posts.each(function (post, key) { %> <% let bg = post.photos && post.photos[0] || ''%>
+
+    <% if (key === 2 && theme.google_ad_client && !_.isEmpty(theme.google_ad_client)) { %>
+      <li class="item">
+        <div class="google-ads">
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-format="fluid"
+              data-ad-layout-key="-fb+5w+4e-db+86"
+              data-ad-client="ca-pub-9618079338040236"
+              data-ad-slot="8288106873"></ins>
+          <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </li>
+    <% } %>
+
+  <li class="item">
+
+      <% if (post.top) { %>
+        <div class="top">
+          <div class="iconfont icon-zuirehotxiankuang animated infinite tada"></div>
+        </div>
+      <% } %>
+
+      <% if (bg) { %>
+      <div class="bg">
+        <a
+          href="<%- url_for(post.path) %>"
+          class="photo"
+          title="<%= post.title %>"
+          style="background-image: url( <%= bg %> )"
+        ></a>
+      </div>
+      <% }%>
+      <div class="describe">
+        <div class="title">
+          <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+        </div>
+        <div class="date">
+          <span class="iconfont icon-time-circle"></span>
+          <span><%- date(post.date, "YY/MM/DD") %></span>
+        </div>
+        <% if (post.excerpt) { %>
+        <div class="excerpt post-wrap"><%- post.excerpt %></div>
+        <% }%>
+        <div class="meta">
+          <div class="l">
+            <div class="warp">
+              <% if (post.categories) { %>
+              <span class="iconfont icon-folder"></span>
+              <span class="desp">
+                <% for (var j=0; j < post.categories.data.length; j++) { %> <% if (post.categories.data[j] &&
+                post.categories.data[j].name) { %>
+                <a href="/categories/<%- post.categories.data[j].name %>"><%- post.categories.data[j].name %></a>
+                <% } %> <% } %>
+              </span>
+              <% } %>
+            </div>
+
+            <% if (post.tags) { %>
+            <div class="warp">
+              <span class="iconfont icon-tag1"></span>
+              <span class="desp">
+                <% for (var i=0; i < post.tags.data.length; i++) { %> <% if (post.tags.data[i] &&
+                post.tags.data[i].name) { %>
+                <a href="/tags/<%- post.tags.data[i].name %>"><%- post.tags.data[i].name %></a>
+                <% } %> <% } %>
+              </span>
+            </div>
+            <% } %>
+            <div class="warp">
+              <div class="share" data-url="<%- url_for(post.path) %>">
+                <span class="iconfont icon-share"></span>
+              </div>
+              <div class="desp share" data-url="<%- url_for(post.path) %>">
+                <a href="#"><%= __('share') %></a>
+              </div>
+            </div>
+          </div>
+          <div class="r">
+            <a href="<%- url_for(post.path) %>">Read More</a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <% })%>
+  </ul>
+</div>
+<% }%>
+<div class="paginator">
+  <%- paginator({ prev_text: '<', next_text: '>', prev_next: false }) %>
+</div>
