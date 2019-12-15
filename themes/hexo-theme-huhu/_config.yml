@@ -84,3 +84,15 @@ reward:
 #service worker 配合pjax
 service_worker:
   open: false #开启sw
+
+highlight:
+  enable: true
+  hljs: true #新增hljs参数，并设为true，不然无法使用highlight.js 官方的 css
+  line_number: false #暂不支持行号
+  auto_detect: false #这一项也关闭，若开启有可能报错
+  tab_replace:
+
+#valine评论
+valine:
+  API_ID: 'aBJGiAWNEuP7aXAPvy8E2Wx3-gzGzoHsz'
+  API_KEY: 'DeXWdUgrtsSiedk1taJPoKeT'

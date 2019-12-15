@@ -14,11 +14,13 @@ require(['jquery', 'util', 'valine', 'chart', 'registerSW', 'fancybox', 'confirm
       el: '#comment',
       appId: HUHU_CONFIG.valine.API_ID,
       appKey: HUHU_CONFIG.valine.API_KEY,
-      notify: false,
-      visitor: true,
-      recordIP: true,
-      avatar: 'mp',
-      placeholder: '骑士很煎蛋、骑士很孜然'
+      notify: HUHU_CONFIG.valine.notify || false,
+      visitor: HUHU_CONFIG.valine.visitor || true,
+      recordIP: HUHU_CONFIG.valine.recordIP || true,
+      verify: HUHU_CONFIG.valine.verify || false,
+      avatar: HUHU_CONFIG.valine.avatar || 'retro',
+      placeholder: '~~~',
+      lang: HUHU_CONFIG.valine.lang || 'en'
     })
   }
 
