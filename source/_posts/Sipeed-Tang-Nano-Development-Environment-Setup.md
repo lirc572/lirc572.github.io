@@ -181,8 +181,8 @@ Click on Program/Configure, wait until the upload and verification process finis
 
 Now the board is loaded with your design. Press the buttons to test it.
 
-![Final 0](/img/tang-nano-setup/final0.png)
-![Final 1](/img/tang-nano-setup/final1.png)
+![Final 0](/img/tang-nano-setup/final0.jpg)
+![Final 1](/img/tang-nano-setup/final1.jpg)
 
 ## Further Readings
 
