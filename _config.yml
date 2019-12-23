@@ -101,3 +101,5 @@ deploy:
   type: git
   repo: git@github.com:lirc572/lirc572.github.io.git
   branch: master
+
+google_site_verification: 'XjHpWeW4AFqdxb7JVYdanSiNdCzFU-rmVMHmmykLwxk'
