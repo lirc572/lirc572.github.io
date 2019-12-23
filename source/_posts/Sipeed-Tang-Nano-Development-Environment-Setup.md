@@ -27,7 +27,7 @@ For Linux (I have only tested it on Ubuntu, but other common Linux distros shoul
 
 Open the IDE. Windows users can select it from the Start Menu and linux users can run the `gw_ide` executable file under the `.../IDE/bin/` directory (make sure you have execute permission).
 
-Upon starting, the software would prompt for license configuration. You can either use a local license or a license server. A local license allows you to use the software when you are offline. For now, just use Sipeed's license server to set it up. If you want to get a local license file, use the link at the bottom of the window or follow the instructions on [this page](http://tangnano.sipeed.com/en/get_started/install-the-ide.html#license).
+Upon starting, the software would prompt for license configuration. You can either use a local license or a license server. A local license allows you to use the software when you are offline. For now, just use Sipeed's license server to set it up. If you want to get a local license file, use the link at the bottom of the window or follow the instructions on [this page](http://tangnano.sipeed.com/en/get_started/install-the-ide.html#license). (Remember to check your *SPAM* folder!!!)
 
 Fill in the following information:
 
