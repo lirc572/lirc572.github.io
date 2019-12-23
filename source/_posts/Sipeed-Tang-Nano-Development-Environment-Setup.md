@@ -11,6 +11,8 @@ The Sipeed Tang Nano (sometimes also refered to as Lichee Tang Nano) is a cheap 
 
 ![Tang Nano Board](/img/tang-nano-setup/tang_nano_board.jpg)
 
+In this article, we will go through the basic steps of how to set up a development environment for the Tang Nano.
+
 ## Download and Install the official Gowin IDE
 
 For now, we need the official Gowin IDE to work with the Tang Nano board. Download the IDE from [here](http://www.gowinsemi.com.cn/faq.aspx). Find the links shown in the figure below and download the latest version for your operating system (Windows or Linux).
