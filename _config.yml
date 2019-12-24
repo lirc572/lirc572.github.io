@@ -105,9 +105,6 @@ deploy:
 google_site_verification: 'XjHpWeW4AFqdxb7JVYdanSiNdCzFU-rmVMHmmykLwxk'
 baidu_site_verification: '8H0tn70d3w'
 
-netease_id: '3134347593'
-netease_auto: '1'
-
 #rss
 feed:
   type: atom

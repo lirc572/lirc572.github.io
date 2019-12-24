@@ -3,15 +3,13 @@ const _ = require('lodash')
 /**
  * meta信息
  */
-module.exports = function() {
-  const config = this.config
+module.exports = function(music_id, auto_play) {
+  let n_id = music_id ? music_id : ''
 
-  let n_id = config.netease_id ? config.netease_id : ''
-
-  let n_auto = config.netease_auto ? config.netease_auto : '0'
+  let n_auto = auto_play ? 'autoplay' : ''
 
   let iframe = n_id
-  ? `<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=320 height=320 src="//music.163.com/outchain/player?type=0&id=${n_id}&auto=${n_auto}&height=430" style="margin:10px auto; display:block;"></iframe>`
+  ? `<audio id="music" controls ${n_auto} loop preload="auto" style="width:300px; margin: 10px auto;"><source src="https://music.163.com/song/media/outer/url?id=${n_id}.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>${n_auto ? "<script>var music=document.getElementById('music');while(music.paused){music.play();}</script>" : ""}`
   : ''
 
   return !_.isEmpty(iframe) ? iframe : ''

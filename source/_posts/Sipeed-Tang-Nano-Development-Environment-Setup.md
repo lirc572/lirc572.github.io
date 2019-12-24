@@ -2,6 +2,7 @@
 title: Sipeed Tang Nano Development Environment Setup
 date: 2019-12-23 21:18:19
 tags:
+music: '1404805139'
 ---
 
 
