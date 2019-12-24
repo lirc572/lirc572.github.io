@@ -116,3 +116,5 @@ feed:
   content_limit_delim: ''
   order_by: -date
   icon: icon.png
+
+music_server: 'https://5akk68wdz8qnp.cfc-execute.bj.baidubce.com/music/'

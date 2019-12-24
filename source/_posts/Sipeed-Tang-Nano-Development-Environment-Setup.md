@@ -2,6 +2,21 @@
 title: Sipeed Tang Nano Development Environment Setup
 date: 2019-12-23 21:18:19
 tags:
+- tang nano
+- sipeed
+- sipeed tang nano
+- lichee tang nano
+- lichee tang
+- FPGA
+- tutorial
+- tang nano tutorial
+- Verilog
+- SystemVerilog
+- Gowin
+- Little Bee
+categories:
+- Tutorials
+- FPGA
 music: '1404805139'
 ---
 

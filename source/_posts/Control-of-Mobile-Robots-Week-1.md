@@ -1,7 +1,12 @@
 ---
 title: Control of Mobile Robots Week 1
-tags: control-of-mobile-robots, control, robotics
 date: 2019-12-16 00:27:32
+tags:
+- control
+- robot
+- robotics
+categories:
+- Robotics
 music: '2147483647'
 auto_play: true
 ---
