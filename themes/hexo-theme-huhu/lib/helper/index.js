@@ -19,4 +19,5 @@ module.exports = function(hexo) {
   hexo.extend.helper.register('gtm_noscript', handleRequire('./gtm_noscript'))
   hexo.extend.helper.register('baidu_tongji', handleRequire('./baidu_tongji'))
   hexo.extend.helper.register('google_adsense', handleRequire('./google_adsense'))
+  hexo.extend.helper.register('music', handleRequire('./music'))
 }
