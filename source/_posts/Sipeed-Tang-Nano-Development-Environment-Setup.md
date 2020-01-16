@@ -69,7 +69,7 @@ After entering the IDE, click on `Synplify Pro` under Tools. The synthesizer sho
 
 ## Try a Simple Design
 
-Let's start with a basic design. Since the board has 2 push buttons and an LED, why notuse the push buttons to light up the LED?
+Let's start with a basic design. Since the board has 2 push buttons and an LED, why not use the push buttons to light up the LED?
 
 Let's take a look at the schematic of the board ([link here](http://dl.sipeed.com/TANG/Nano/HDK)).
 
@@ -131,7 +131,7 @@ not (b, buttonB);
 endmodule;
 ```
 
-The above code defines a module called main with 2 input ports and one output port. It can be illustrated as the figure below.
+The above code defines a module called main with 2 input ports and one output port. It can be illustrated in the figure below.
 
 ![Logic Gates](/img/tang-nano-setup/logic_gates.png)
 
