@@ -6,7 +6,7 @@ auto_play: true
 
 ## About Me
 
-- EE undergraduate at [NUS](http://nus.edu.sg/) from 2019 to ????
+- ~~EE~~CS undergraduate at [NUS](http://nus.edu.sg/) from 2019 to ????
 - Love electronics and programming
 
 ## About This Blog
