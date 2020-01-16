@@ -187,7 +187,7 @@ Now, connect the Tang Nano board to your computer through a USB-Type-C cable and
 
 ![Scan Device](/img/tang-nano-setup/scan_device.png)
 
-Go to `Device Configuration` and select `SRAM Mode` -> `SRAM Program and Verify` under Device Operation. This will upload the code to the SRAM. It is faster than uploading to flash but the design will not be saved if the board loses power. If you want to save the design, choose embedded flash instead. Under Programming Options, find the .fs file under `[project-folder]/impl/pnr`. Click on Save to continue.
+Go to `Device Configuration` and select `SRAM Mode` -> `SRAM Program and Verify` under Device Operation. This will upload the code to the SRAM. It is faster than uploading to flash but the design will not be saved if the board loses power. If you want to save the design, choose embedded flash instead. Under Programming Options, find the `.fs` file under `[project-folder]/impl/pnr`. Click on Save to continue.
 
 ![Device Configuration](/img/tang-nano-setup/device_configuration.png)
 
