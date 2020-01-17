@@ -6,8 +6,9 @@ auto_play: true
 
 ## About Me
 
-- ~~EE~~CS undergraduate at [NUS](http://nus.edu.sg/) from 2019 to ????
+- ~~EE~~ CS undergraduate at [NUS](http://nus.edu.sg/) from 2019 to ????
 - Love electronics and programming
+- Click here to see [MY RESUME](https://registry.jsonresume.org/lirc572)
 
 ## About This Blog
 
