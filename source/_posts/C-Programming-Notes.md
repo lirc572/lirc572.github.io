@@ -1,13 +1,20 @@
 ---
 title: C Programming Notes
-date: 2020-02-03 21:52:35
 tags:
+  - C
+  - programming
+  - notes
+categories:
+  - Notes
+date: 2020-02-03 22:08:47
 ---
 
 
 This post consists of some notes of C.
 
 ## Determine the length of an array
+
+[Code 1](https://onlinegdb.com/ByhydiBGI)
 
 ```C
 #include<stdio.h>
@@ -22,6 +29,8 @@ int main() {
 Compile and run the code above and you should see the programming showing the correct array length (7).
 
 What about the following code?
+
+[Code 2](https://onlinegdb.com/r1tzdsrMI)
 
 ```C
 #include<stdio.h>
