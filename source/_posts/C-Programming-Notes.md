@@ -71,3 +71,12 @@ next * () * const * char
 ```
 
 It is interpreted as "next is a pointer to a function (which takes no parameter) which returns a pointer to a constant pointer to a char variable".
+
+## Pointer Arithmetic
+
+```C
+int *ptr;
+ptr++;
+```
+
+When incrementing an int pointer `ptr`, it will increase by **4** (sizeof(int)).
