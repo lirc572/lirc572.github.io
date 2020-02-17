@@ -10,9 +10,6 @@ date: 2020-02-03 22:08:47
 music: '433223011'
 ---
 
-
-This post consists of some notes of C.
-
 ## Determine the length of an array
 
 [Code 1](https://onlinegdb.com/ByhydiBGI)
