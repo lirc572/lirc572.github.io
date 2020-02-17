@@ -23,5 +23,5 @@ The third line would actually call `void f(int a)` because `NULL` is an `int`. T
 
 Hence, in C++, it would be better to use `0` for int and `nullptr` for null pointer to avoid ambiguity.
 
-See [here](https://en.cppreference.com/w/c/types/NULL) and [here](https://en.cppreference.com/w/cpp/types/NULL)
+See [here](https://en.cppreference.com/w/c/types/NULL), [here](https://en.cppreference.com/w/cpp/types/NULL) and [here](https://en.cppreference.com/w/cpp/language/nullptr) for reference.
 
