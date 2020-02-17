@@ -81,3 +81,13 @@ ptr++;
 ```
 
 When incrementing an int pointer `ptr`, it will increase by **4** (sizeof(int)).
+
+## Character Literals
+
+```C
+sizeof('c') == sizeof(int) == 1;
+```
+
+In C, a character literal is an int.
+(Note that in C++ character literals are of type char)
+
