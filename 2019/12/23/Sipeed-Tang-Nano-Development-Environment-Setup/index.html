@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
+  var _hmt = _hmt || []
+  ;(function() {
+    var hm = document.createElement('script')
+    hm.src = 'https://hm.baidu.com/hm.js?5a0acc897fd96474a2c8f4deac84611a'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+  })()
+</script> <meta name="baidu-site-verification" content="8H0tn70d3w" /><meta name="google-site-verification" content="XjHpWeW4AFqdxb7JVYdanSiNdCzFU-rmVMHmmykLwxk" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    
+    <title>
+      Sipeed Tang Nano Development Environment Setup - lirc572
+    </title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    
+<link rel="stylesheet" href="/style/style.css">
+
+  <meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="lirc572" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+  <body>
+    
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="post-toc" class="animated hiddenToc hide">
+      <span class="title">Toc</span>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Download-and-Install-the-official-Gowin-IDE"><span class="toc-text">Download and Install the official Gowin IDE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configure-License"><span class="toc-text">Configure License</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Try-a-Simple-Design"><span class="toc-text">Try a Simple Design</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Further-Readings"><span class="toc-text">Further Readings</span></a></li></ol>
+    </div>
+    
+    <div id="fixed-menu-wrap">
+      <span class="iconfont icon-sousuo search-box menu-reset"></span>
+      <span class="icon-toc menu-reset">Toc</span>
+      <span class="iconfont icon-arrowup menu-reset"></span>
+    </div>
+    <div id="fixed-menu">
+      <span class="iconfont icon-menu-"></span>
+    </div>
+    <div id="progress">
+      <div class="line"></div>
+    </div>
+    <div id="search-shade" class="animated hiddenSearch hide">
+      <div class="input-wrap">
+        <span class="iconfont icon-sousuo search-box"></span>
+        <input type="text" placeholder="Search" />
+        <span class="iconfont icon-close"></span>
+      </div>
+      <div class="search-result">
+        <div class="meta">
+          <span><b id="result-count">0</b> results found</span>
+          <img src="/images/logo.png" />
+        </div>
+        <ul id="result-box"></ul>
+      </div>
+    </div>
+    <div id="menu-mask" class="animated hideMenuMask hide">
+      <span class="iconfont icon-close"></span>
+      <div class="nav">
+        
+        <a href="/" class="">
+          Home
+        </a>
+        
+        <a href="/archives" class="">
+          Archives
+        </a>
+        
+        <a href="/categories" class="">
+          Categories
+        </a>
+        
+        <a href="/tags" class="">
+          Tags
+        </a>
+        
+        <a href="/friends" class="">
+          Friends
+        </a>
+        
+        <a href="/about" class="">
+          About
+        </a>
+        
+      </div>
+    </div>
+    <div id="header">
+      <div class="intro">
+        <a href="/" class="logo" style="background-image: url('/images/logo.png')"></a>
+        <div class="author">lirc572</div>
+      </div>
+      <div class="nav">
+        <span class="iconfont icon-menu menu-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+    </div>
+    <div id="side" class="animated bounceInLeft">
+      <div class="shrink">
+        <a href="/" class="logo" style="background-image: url('/images/logo.png')"></a>
+        <span class="iconfont icon-menu toggle-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+      <div class="magnify">
+        <div class="about">
+          <div class="author">lirc572</div>
+          <a href="/" class="logo" style="background-image: url('/images/logo.png')"></a>
+        </div>
+
+        <div class="nav">
+          
+          <a href="/" class="">
+            Home
+          </a>
+          
+          <a href="/archives" class="">
+            Archives
+          </a>
+          
+          <a href="/categories" class="">
+            Categories
+          </a>
+          
+          <a href="/tags" class="">
+            Tags
+          </a>
+          
+          <a href="/friends" class="">
+            Friends
+          </a>
+          
+          <a href="/about" class="">
+            About
+          </a>
+          
+          <a href="#" class="search-box">
+            <span class="iconfont icon-sousuo"></span>
+          </a>
+        </div>
+        <div class="bottom">
+          <div class="follow">
+            
+            <a href="https://github.com/lirc572" target="_block">
+              <span class="iconfont icon-github"></span>
+            </a>
+             
+            <a href="/atom.xml" target="_block">
+              <span class="iconfont icon-rss"></span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="main animated bounceInRight delay-0.7s">
+        <article class="post-entry">
+    <div class="header">
+      
+      <div class="title">Sipeed Tang Nano Development Environment Setup</div>
+      <div class="meta">
+        <span class="item">
+          <span class="iconfont icon-time-circle"></span>
+          <span>2019/12/23</span>
+        </span>
+
+        
+          <span class="item leancloud-visitors" id="/2019/12/23/Sipeed-Tang-Nano-Development-Environment-Setup/" data-flag-title="Sipeed Tang Nano Development Environment Setup">
+            <span class="iconfont icon-eye1"></span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+
+         
+        <span class="item">
+          <span class="iconfont icon-folder"></span>
+          <span>
+              
+                
+                  <a href="/categories/Tutorials">Tutorials</a>
+                
+              
+                
+                  <a href="/categories/FPGA">FPGA</a>
+                
+              
+          </span>
+        </span>
+        
+        
+         
+          <span class="item">
+            <span class="iconfont icon-tag1"></span>
+            <span>
+                
+                  
+                    <a href="/tags/tutorial">tutorial</a>
+                  
+                
+                  
+                    <a href="/tags/tang nano">tang nano</a>
+                  
+                
+                  
+                    <a href="/tags/sipeed">sipeed</a>
+                  
+                
+                  
+                    <a href="/tags/sipeed tang nano">sipeed tang nano</a>
+                  
+                
+                  
+                    <a href="/tags/lichee tang nano">lichee tang nano</a>
+                  
+                
+                  
+                    <a href="/tags/lichee tang">lichee tang</a>
+                  
+                
+                  
+                    <a href="/tags/FPGA">FPGA</a>
+                  
+                
+                  
+                    <a href="/tags/tang nano tutorial">tang nano tutorial</a>
+                  
+                
+                  
+                    <a href="/tags/Verilog">Verilog</a>
+                  
+                
+                  
+                    <a href="/tags/SystemVerilog">SystemVerilog</a>
+                  
+                
+                  
+                    <a href="/tags/Gowin">Gowin</a>
+                  
+                
+                  
+                    <a href="/tags/Little Bee">Little Bee</a>
+                  
+                
+            </span>
+          </span>
+         
+      </div>
+      <div>
+      </div>
+    </div>
+    <h2 id="Introduction">Introduction<a class="post-anchor" href="#Introduction"></a></h2><p>The Sipeed Tang Nano (sometimes also refered to as Lichee Tang Nano) is a cheap but powerful FPGA development0 board that features the GW1N-LV1QN48C6/I5 chip from <a href="https://www.gowinsemi.com/" target="_blank" rel="noopener">Gowin</a>. It costs as little as <a href="https://www.seeedstudio.com/Sipeed-Tang-Nano-FPGA-board-powered-by-GW1N-1-FPGA-p-4304.html" target="_blank" rel="noopener">USD4.90</a> or <a href="https://m.tb.cn/h.eCSPsYf?sm=9c7938" target="_blank" rel="noopener">CNY34.90</a>. The Gowin GW1N chip has 1152 LUT4, 864 FF, 72Kbit B-SRAM, 96Kbit user flash and 1 PLL. The board also has an onboard 24MHz crystal. The board has 64Mbit QSPI PSRAM, 36 I/O Pins, 1 RGB LED, 2 push buttons and a 40-pin LCD interface with on-board backlight driver circuit. It has a built-in JTAG downloader so you can download to the chip by simply connecting the computer to it through a USB-Type-C cable.</p>
+<p><a href="/img/tang-nano-setup/tang_nano_board.jpg" data-caption="Tang Nano Board" data-fancybox="images"><img src="/img/tang-nano-setup/tang_nano_board.jpg" alt="Tang Nano Board"></a></p>
+<p>In this article, we will go through the basic steps of how to set up a development environment for the Tang Nano.</p>
+<h2 id="Download-and-Install-the-official-Gowin-IDE">Download and Install the official Gowin IDE<a class="post-anchor" href="#Download-and-Install-the-official-Gowin-IDE"></a></h2><p>For now, we need the official Gowin IDE to work with the Tang Nano board. Download the IDE from <a href="http://www.gowinsemi.com.cn/faq.aspx" target="_blank" rel="noopener">here</a>. Find the links shown in the figure below and download the latest version for your operating system (Windows or Linux).</p>
+<p><a href="/img/tang-nano-setup/gowin_download_page.png" data-caption="gowin download page" data-fancybox="images"><img src="/img/tang-nano-setup/gowin_download_page.png" alt="gowin download page"></a></p>
+<p>To install the IDE, Windows users need to unzip and run the installer and follow the step-by-step instructions. Install the driver if not already installed.</p>
+<p>For Linux (I have only tested it on Ubuntu, but other common Linux distros should also work) users, just extract the files to any location.</p>
+<h2 id="Configure-License">Configure License<a class="post-anchor" href="#Configure-License"></a></h2><p>Open the IDE. Windows users can select it from the Start Menu and linux users can run the <code>gw_ide</code> executable file under the <code>.../IDE/bin/</code> directory (make sure you have execute permission).</p>
+<p>Upon starting, the software would prompt for license configuration. You can either use a local license or a license server. A local license allows you to use the software when you are offline. For now, just use Sipeed’s license server to set it up. If you want to get a local license file, use the link at the bottom of the window or follow the instructions on <a href="http://tangnano.sipeed.com/en/get_started/install-the-ide.html#license" target="_blank" rel="noopener">this page</a>. (Remember to check your <em>SPAM</em> folder!!!)</p>
+<p>Fill in the following information:</p>
+<p><a href="/img/tang-nano-setup/license_config.png" data-caption="licnese configuration" data-fancybox="images"><img src="/img/tang-nano-setup/license_config.png" alt="licnese configuration"></a></p>
+<p>Press the <code>Test Connection</code> button and you should see a “<em>Successed</em>“ (sic) message.</p>
+<p>If you want to use the Synplify Pro synthesizer in the IDE, you also need to add an environment variable: <code>LM_LICENSE_FILE=27020@45.33.107.56</code>.</p>
+<p>On Windows, run the following command in cmd:</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setx LM_LICENSE_FILE <span class="number">27020</span>@<span class="number">45</span>.<span class="number">33</span>.<span class="number">107</span>.<span class="number">56</span></span><br></pre></td></tr></table></figure>
+
+<p>On Linux, append the following line to your <code>~/.bashrc</code> or <code>~/.profile</code>, etc.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> LM_LICENSE_FILE=27020@45.33.107.56</span><br></pre></td></tr></table></figure>
+
+<p>After entering the IDE, click on <code>Synplify Pro</code> under Tools. The synthesizer should be opened in a few seconds. If the license verification fails, try a re-login or reboot.</p>
+<h2 id="Try-a-Simple-Design">Try a Simple Design<a class="post-anchor" href="#Try-a-Simple-Design"></a></h2><p>Let’s start with a basic design. Since the board has 2 push buttons and an LED, why not use the push buttons to light up the LED?</p>
+<p>Let’s take a look at the schematic of the board (<a href="http://dl.sipeed.com/TANG/Nano/HDK" target="_blank" rel="noopener">link here</a>).</p>
+<p><a href="/img/tang-nano-setup/led_schematic.png" data-caption="LED" data-fancybox="images"><img src="/img/tang-nano-setup/led_schematic.png" alt="LED"></a><br><a href="/img/tang-nano-setup/push_buttons_schematic.png" data-caption="Push buttons" data-fancybox="images"><img src="/img/tang-nano-setup/push_buttons_schematic.png" alt="Push buttons"></a><br><a href="/img/tang-nano-setup/fpga_pins.png" data-caption="FPGA pins" data-fancybox="images"><img src="/img/tang-nano-setup/fpga_pins.png" alt="FPGA pins"></a></p>
+<p>From the schematic, we can see that The cathode (negative side) of the R/G/B LED are connected to pins <code>18</code>, <code>16</code> and <code>17</code> respectively. When you pull those pins low, the LED would light up. The two push buttons are connected to pins <code>14</code> and <code>15</code> which are normally pulled up. When a button is pressed, the corresponding pin would be pulled low. With these information, we can get started.</p>
+<p>First, open the IDE.</p>
+<p><a href="/img/tang-nano-setup/ide_start_page.png" data-caption="IDE start page" data-fancybox="images"><img src="/img/tang-nano-setup/ide_start_page.png" alt="IDE start page"></a></p>
+<p>On the start page, create a new project by clicking on <code>New Project...</code> under Quick Start or <code>File</code> -&gt; <code>New</code>.</p>
+<p><a href="/img/tang-nano-setup/new_project.png" data-caption="New project" data-fancybox="images"><img src="/img/tang-nano-setup/new_project.png" alt="New project"></a></p>
+<p>Choose <code>FPGA Design Project</code>.</p>
+<p><a href="/img/tang-nano-setup/project_wizard1.png" data-caption="Project Wizard 1" data-fancybox="images"><img src="/img/tang-nano-setup/project_wizard1.png" alt="Project Wizard 1"></a></p>
+<p>We’ll name it ‘my_project’. Choose a suitable directory to create your project in.</p>
+<p><a href="/img/tang-nano-setup/project_wizard2.png" data-caption="Project Wizard 2" data-fancybox="images"><img src="/img/tang-nano-setup/project_wizard2.png" alt="Project Wizard 2"></a></p>
+<p>Select <code>GW1N-LV1QN48C6/I5</code> from the list. It may be quicker to use the filters.</p>
+<p><a href="/img/tang-nano-setup/project_wizard3.png" data-caption="Project Wizard 3" data-fancybox="images"><img src="/img/tang-nano-setup/project_wizard3.png" alt="Project Wizard 3"></a></p>
+<p>Finally, make sure all information on the summary page is correct and click on <code>Finish</code>. You will then be directed to a design summary page of your newly created project.</p>
+<p><a href="/img/tang-nano-setup/project_page.png" data-caption="Design Summary" data-fancybox="images"><img src="/img/tang-nano-setup/project_page.png" alt="Design Summary"></a></p>
+<p>Within Design panel, right click and select <code>New File...</code></p>
+<p><a href="/img/tang-nano-setup/new_file.png" data-caption="New file" data-fancybox="images"><img src="/img/tang-nano-setup/new_file.png" alt="New file"></a></p>
+<p>Choose <code>Verilog File</code> and click on <code>OK</code>.</p>
+<p><a href="/img/tang-nano-setup/verilog_file.png" data-caption="Verilog file" data-fancybox="images"><img src="/img/tang-nano-setup/verilog_file.png" alt="Verilog file"></a></p>
+<p>Give it a random name and click on <code>OK</code> again.</p>
+<p><a href="/img/tang-nano-setup/editor.png" data-caption="Editor" data-fancybox="images"><img src="/img/tang-nano-setup/editor.png" alt="Editor"></a></p>
+<p>Now we are in the editor view.</p>
+<p>Copy and paste the following code into the editor.</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> main (</span><br><span class="line">    <span class="keyword">input</span> buttonA, buttonB,</span><br><span class="line">    <span class="keyword">output</span> led</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">nand</span> (led, a, b);</span><br><span class="line"><span class="keyword">not</span> (a, buttonA);</span><br><span class="line"><span class="keyword">not</span> (b, buttonB);</span><br><span class="line"><span class="keyword">endmodule</span>;</span><br></pre></td></tr></table></figure>
+
+<p>The above code defines a module called main with 2 input ports and one output port. It can be illustrated in the figure below.</p>
+<p><a href="/img/tang-nano-setup/logic_gates.png" data-caption="Logic Gates" data-fancybox="images"><img src="/img/tang-nano-setup/logic_gates.png" alt="Logic Gates"></a></p>
+<p>Note that only when both push buttons are pressed, their outputs will be pulled low and thus the inputs to the nand gate will be high after passing the inverters. The output of the nand gate (the cathode of the LED) will therefore be low, thus lighting up the LED.</p>
+<p>Save the verilog file and go to Process panel.</p>
+<p><a href="/img/tang-nano-setup/process.png" data-caption="Process" data-fancybox="images"><img src="/img/tang-nano-setup/process.png" alt="Process"></a></p>
+<p>Right click on <code>Synthesize -&gt; Configuration</code>.</p>
+<p>You can use either the Synplify Pro or the GowinSynthesis as synthesizer. If you do not have a license for Synplify Pro, you should select GowinSynthesis. Leave everything else as default for now.</p>
+<p><a href="/img/tang-nano-setup/synthesis_configuration.png" data-caption="Synthesis configuration" data-fancybox="images"><img src="/img/tang-nano-setup/synthesis_configuration.png" alt="Synthesis configuration"></a></p>
+<p>Double click on <code>Synthesize</code> or right click and select <code>Run</code> or <code>Rerun</code> to run the synthesizer. After a few seconds, the icon next to <code>Synthesize</code> should become a tick, indicating that the process has completed. Note that if you chose Synplify Pro in the last step, it may take longer.</p>
+<p>Next, double click on <code>FloorPlanner</code> under <code>User Constraints</code>.</p>
+<p><a href="/img/tang-nano-setup/constraint_file.png" data-caption="Default constraint file" data-fancybox="images"><img src="/img/tang-nano-setup/constraint_file.png" alt="Default constraint file"></a></p>
+<p>In the popup window, click on <code>OK</code> to create a default CST file.</p>
+<p>FloorPlanner is a GUI to create physical constraints or map the physical I/O Pins of the FPGA chip to ports in HDL files.</p>
+<p>In the FloorPlanner Window, go to Package View. In NetList Panel, find <code>buttonA</code>, <code>buttonB</code>, <code>led</code> under Ports and drag them to the respective Pins on the right based on the schematic we saw just now. We will be using the Green LED. When it is done, the constraints will be shown at the bottom. (buttonA -&gt; 15, buttonB -&gt; 14, led -&gt; 16)</p>
+<p><a href="/img/tang-nano-setup/floorplanner.png" data-caption="FloorPlanner" data-fancybox="images"><img src="/img/tang-nano-setup/floorplanner.png" alt="FloorPlanner"></a></p>
+<p>Click on the save button and close FloorPlanner window. You should now see a new .cst file created by FloorPlanner. You can also create the .cst file yourself instead of using FloorPlanner later on.</p>
+<p><a href="/img/tang-nano-setup/cst_file.png" data-caption=".cst file" data-fancybox="images"><img src="/img/tang-nano-setup/cst_file.png" alt=".cst file"></a></p>
+<p>Next, go back to Process panel and double click on <code>Place &amp; Route</code>.</p>
+<p><a href="/img/tang-nano-setup/place_and_route.png" data-caption="Place and Route" data-fancybox="images"><img src="/img/tang-nano-setup/place_and_route.png" alt="Place and Route"></a></p>
+<p>Now it is time to program the chip. We need to use the built-in programmer.</p>
+<p>To open the programmer on Windows, either click on <code>Program Device</code> in Process panel or click on the programmer icon in the toolbar at the top.</p>
+<p><a href="/img/tang-nano-setup/open_programmer.png" data-caption="Open programmer" data-fancybox="images"><img src="/img/tang-nano-setup/open_programmer.png" alt="Open programmer"></a></p>
+<p>On Linux, you need to run the programmer as root. Thus if you did not start the IDE as root (and you should not do so), you cannot start the programmer from the IDE. Run the following script in your terminal and enter your password.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo [Installation-Path]/Programmer/bin/programmer</span><br></pre></td></tr></table></figure>
+
+<p><a href="/img/tang-nano-setup/programmer.png" data-caption="Programmer" data-fancybox="images"><img src="/img/tang-nano-setup/programmer.png" alt="Programmer"></a></p>
+<p>Now, connect the Tang Nano board to your computer through a USB-Type-C cable and click <code>Scan Device</code> in the toolbar. You should then be able to see your board listed below.</p>
+<p><a href="/img/tang-nano-setup/scan_device.png" data-caption="Scan Device" data-fancybox="images"><img src="/img/tang-nano-setup/scan_device.png" alt="Scan Device"></a></p>
+<p>Go to <code>Device Configuration</code> and select <code>SRAM Mode</code> -&gt; <code>SRAM Program and Verify</code> under Device Operation. This will upload the code to the SRAM. It is faster than uploading to flash but the design will not be saved if the board loses power. If you want to save the design, choose embedded flash instead. Under Programming Options, find the <code>.fs</code> file under <code>[project-folder]/impl/pnr</code>. Click on Save to continue.</p>
+<p><a href="/img/tang-nano-setup/device_configuration.png" data-caption="Device Configuration" data-fancybox="images"><img src="/img/tang-nano-setup/device_configuration.png" alt="Device Configuration"></a></p>
+<blockquote><p>in cable settings, change frequency to 2.5mhz manually (instead of using the default 2m)!!! Otherwise flashing to embedded flash won’t work!</p>
+</blockquote>
+
+<p>Click on Program/Configure, wait until the upload and verification process finished.</p>
+<p><a href="/img/tang-nano-setup/program_configure.png" data-caption="Program/Configure" data-fancybox="images"><img src="/img/tang-nano-setup/program_configure.png" alt="Program/Configure"></a></p>
+<p>Now the board is loaded with your design. Press the buttons to test it.</p>
+<p><a href="/img/tang-nano-setup/final0.jpg" data-caption="Final 0" data-fancybox="images"><img src="/img/tang-nano-setup/final0.jpg" alt="Final 0"></a><br><a href="/img/tang-nano-setup/final1.jpg" data-caption="Final 1" data-fancybox="images"><img src="/img/tang-nano-setup/final1.jpg" alt="Final 1"></a></p>
+<h2 id="Further-Readings">Further Readings<a class="post-anchor" href="#Further-Readings"></a></h2><ul>
+<li><a href="http://tangnano.sipeed.com/" target="_blank" rel="noopener">Official Sipeed documentation</a></li>
+<li><a href="https://qiita.com/ciniml/items/bb9723673c91d8374b63" target="_blank" rel="noopener">cinim’s totorial (in Japanese)</a></li>
+<li><a href="https://xesscorp.github.io/tang_nano_user/docs/_site/" target="_blank" rel="noopener">Tang Nano User</a></li>
+<li><a href="http://www.gowinsemi.com.cn/faq.aspx" target="_blank" rel="noopener">Gowin’s documentations</a></li>
+<li><a href="http://dl.sipeed.com/TANG/Nano" target="_blank" rel="noopener">Sipeed’s download page (a collection of related documents)</a></li>
+<li><a href="https://github.com/sipeed/Tang-Nano-examples" target="_blank" rel="noopener">Official Tang Nano examples GitHub repository</a></li>
+</ul>
+<style>
+details
+{
+  cursor: pointer;
+}
+img
+{
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+img:hover
+{
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+</style>
+
+  
+    <div class="post-reward">
+    <div id="reward-button">Buy me ☕</div>
+      <div id="qr">
+        <div class="wrap">
+            
+            <div class="bg-wrap">
+              <a href="/images/mia_alipay.jpg" target="_block" class="bg" style="background-image:url('/images/mia_alipay.jpg')"></a>
+              Alipay
+            </div>
+            
+            
+            <div class="bg-wrap">
+                <a href="/images/mia_wechatpay.png" target="_block" class="bg" style="background-image:url('/images/mia_wechatpay.png')"></a>
+              Wechat
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  
+  <div class="post-guide">
+    <div class="item left">
+        
+          <a href="/2020/02/03/C-Programming-Notes/">C Programming Notes</a>
+        
+    </div>
+    <div class="item right">
+        
+          <a href="/2019/12/15/Hello-World/">Hello World</a>
+        
+    </div>
+  </div>
+
+  
+
+  <div class="post-copyright">
+    <div class="auth">
+      Author：<a href="https://lirc572.github.io">lirc572</a>
+    </div>
+    <div class="link">
+      Permanent Link：<a href="https://lirc572.github.io/2019/12/23/Sipeed-Tang-Nano-Development-Environment-Setup/">https://lirc572.github.io/2019/12/23/Sipeed-Tang-Nano-Development-Environment-Setup/</a>
+    </div>
+  </div>
+
+  <audio id="music" controls  loop preload="auto" style="width:300px; margin: 10px auto;"><source src="https://5akk68wdz8qnp.cfc-execute.bj.baidubce.com/music/1404805139.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+
+  <div id="comment"></div>
+
+  
+  
+</article>
+        <footer>
+          <div class="copyright">
+            ©2020
+            <a href="https://lirc572.github.io">lirc572</a> Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> |
+            <a href="https://github.com/shixiaohu2206/hexo-theme-huhu" target="_blank" rel="noopener">hexo-theme-huhu</a>
+          </div>
+          
+        </footer>
+      </div>
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </body>
+  
+</html>
+<script type="text/javascript">
+                  window.HUHU_CONFIG = JSON.parse("{\"share\":[\"weibo\",\"weixin\",\"qqkongjian\",\"QQ\",\"douban\",\"facebook\",\"twitter\",\"google\"],\"valine\":{\"API_ID\":\"aBJGiAWNEuP7aXAPvy8E2Wx3-gzGzoHsz\",\"API_KEY\":\"DeXWdUgrtsSiedk1taJPoKeT\"},\"service_worker\":{\"open\":false}}")
+                </script> <script type="text/javascript">window.addEventListener('load', function() {
+    
+    window.loadJs = function(d, m, a) {
+      var c = document.getElementsByTagName('head')[0] || document.head || document.documentElement
+      var b = document.createElement('script')
+      b.defer = true
+      b.setAttribute('type', 'text/javascript')
+      b.setAttribute('charset', 'UTF-8')
+      b.setAttribute('async', 'true')
+      b.setAttribute('src', d)
+      m && b.setAttribute('data-main', '/scripts/app-built')
+      if (typeof a === 'function') {
+        if (window.attachEvent) {
+          b.onreadystatechange = function() {
+            var e = b.readyState
+            if (e === 'loaded' || e === 'complete') {
+              b.onreadystatechange = null
+              a()
+            }
+          }
+        } else {
+          b.onload = a
+        }
+      }
+      c.appendChild(b)
+    }
+    window.loadJs && window.loadJs('https://cdn.bootcss.com/require.js/2.3.6/require.min.js', true, function() {require.config({"paths":{"util":"util","share":"share","search":"search","registerSW":"registerSW","valine":"cdn/Valine.min","av":["https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min"],"pjax":["https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min"],"jquery":["https://cdn.bootcss.com/jquery/3.4.1/jquery.min"],"confirm":["https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min"],"fancybox":["https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min"],"chart":["https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.bundle.min"]},"map":{"*":{"css":"https://cdn.bootcss.com/require-css/0.1.10/css.min.js"}},"shim":{"fancybox":{"deps":["css!https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css"]},"confirm":{"deps":["css!https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min.css"]},"chart":{"deps":["css!https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.min.css"]}},"waitSeconds":3})})
+  })</script> <script type="text/javascript">
+                  ;(function() {
+                    var bp = document.createElement('script')
+                    var curProtocol = window.location.protocol.split(':')[0]
+                    if (curProtocol === 'https') {
+                      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
+                    } else {
+                      bp.src = 'http://push.zhanzhang.baidu.com/push.js'
+                    }
+                    var s = document.getElementsByTagName('script')[0]
+                    s.parentNode.insertBefore(bp, s)
+                  })()
+                </script> 

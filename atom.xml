@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>lirc572</title>
+  <icon>https://lirc572.github.io/icon.png</icon>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://lirc572.github.io/"/>
+  <updated>2020-05-11T04:01:08.830Z</updated>
+  <id>https://lirc572.github.io/</id>
+  
+  <author>
+    <name>lirc572</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C Programming Notes</title>
+    <link href="https://lirc572.github.io/2020/02/03/C-Programming-Notes/"/>
+    <id>https://lirc572.github.io/2020/02/03/C-Programming-Notes/</id>
+    <published>2020-02-03T14:08:47.000Z</published>
+    <updated>2020-05-11T04:01:08.830Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Determine-the-length-of-an-array&quot;&gt;Determine the length of an array&lt;a class=&quot;post-anchor&quot; href=&quot;#Determine-the-length-of-an-array&quot;&gt;&lt;/
+      
+    
+    </summary>
+    
+    
+      <category term="Notes" scheme="https://lirc572.github.io/categories/Notes/"/>
+    
+    
+      <category term="programming" scheme="https://lirc572.github.io/tags/programming/"/>
+    
+      <category term="notes" scheme="https://lirc572.github.io/tags/notes/"/>
+    
+      <category term="C" scheme="https://lirc572.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sipeed Tang Nano Development Environment Setup</title>
+    <link href="https://lirc572.github.io/2019/12/23/Sipeed-Tang-Nano-Development-Environment-Setup/"/>
+    <id>https://lirc572.github.io/2019/12/23/Sipeed-Tang-Nano-Development-Environment-Setup/</id>
+    <published>2019-12-23T13:18:19.000Z</published>
+    <updated>2020-05-11T04:20:29.537Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Introduction&quot;&gt;Introduction&lt;a class=&quot;post-anchor&quot; href=&quot;#Introduction&quot;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The Sipeed Tang Nano (sometimes also refered to as
+      
+    
+    </summary>
+    
+    
+      <category term="Tutorials" scheme="https://lirc572.github.io/categories/Tutorials/"/>
+    
+      <category term="FPGA" scheme="https://lirc572.github.io/categories/Tutorials/FPGA/"/>
+    
+    
+      <category term="tutorial" scheme="https://lirc572.github.io/tags/tutorial/"/>
+    
+      <category term="tang nano" scheme="https://lirc572.github.io/tags/tang-nano/"/>
+    
+      <category term="sipeed" scheme="https://lirc572.github.io/tags/sipeed/"/>
+    
+      <category term="sipeed tang nano" scheme="https://lirc572.github.io/tags/sipeed-tang-nano/"/>
+    
+      <category term="lichee tang nano" scheme="https://lirc572.github.io/tags/lichee-tang-nano/"/>
+    
+      <category term="lichee tang" scheme="https://lirc572.github.io/tags/lichee-tang/"/>
+    
+      <category term="FPGA" scheme="https://lirc572.github.io/tags/FPGA/"/>
+    
+      <category term="tang nano tutorial" scheme="https://lirc572.github.io/tags/tang-nano-tutorial/"/>
+    
+      <category term="Verilog" scheme="https://lirc572.github.io/tags/Verilog/"/>
+    
+      <category term="SystemVerilog" scheme="https://lirc572.github.io/tags/SystemVerilog/"/>
+    
+      <category term="Gowin" scheme="https://lirc572.github.io/tags/Gowin/"/>
+    
+      <category term="Little Bee" scheme="https://lirc572.github.io/tags/Little-Bee/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://lirc572.github.io/2019/12/15/Hello-World/"/>
+    <id>https://lirc572.github.io/2019/12/15/Hello-World/</id>
+    <published>2019-12-15T09:14:06.000Z</published>
+    <updated>2020-05-11T04:01:08.830Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="useless" scheme="https://lirc572.github.io/tags/useless/"/>
+    
+  </entry>
+  
+</feed>

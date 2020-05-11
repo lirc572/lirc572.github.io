@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
+  var _hmt = _hmt || []
+  ;(function() {
+    var hm = document.createElement('script')
+    hm.src = 'https://hm.baidu.com/hm.js?5a0acc897fd96474a2c8f4deac84611a'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+  })()
+</script> <meta name="baidu-site-verification" content="8H0tn70d3w" /><meta name="google-site-verification" content="XjHpWeW4AFqdxb7JVYdanSiNdCzFU-rmVMHmmykLwxk" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    
+    <title>
+      C Programming Notes - lirc572
+    </title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    
+<link rel="stylesheet" href="/style/style.css">
+
+  <meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="lirc572" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+  <body>
+    
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="post-toc" class="animated hiddenToc hide">
+      <span class="title">Toc</span>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Determine-the-length-of-an-array"><span class="toc-text">Determine the length of an array</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Complex-Pointer-Declarations"><span class="toc-text">Complex Pointer Declarations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pointer-Arithmetic"><span class="toc-text">Pointer Arithmetic</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Character-Literals"><span class="toc-text">Character Literals</span></a></li></ol>
+    </div>
+    
+    <div id="fixed-menu-wrap">
+      <span class="iconfont icon-sousuo search-box menu-reset"></span>
+      <span class="icon-toc menu-reset">Toc</span>
+      <span class="iconfont icon-arrowup menu-reset"></span>
+    </div>
+    <div id="fixed-menu">
+      <span class="iconfont icon-menu-"></span>
+    </div>
+    <div id="progress">
+      <div class="line"></div>
+    </div>
+    <div id="search-shade" class="animated hiddenSearch hide">
+      <div class="input-wrap">
+        <span class="iconfont icon-sousuo search-box"></span>
+        <input type="text" placeholder="Search" />
+        <span class="iconfont icon-close"></span>
+      </div>
+      <div class="search-result">
+        <div class="meta">
+          <span><b id="result-count">0</b> results found</span>
+          <img src="/images/logo.png" />
+        </div>
+        <ul id="result-box"></ul>
+      </div>
+    </div>
+    <div id="menu-mask" class="animated hideMenuMask hide">
+      <span class="iconfont icon-close"></span>
+      <div class="nav">
+        
+        <a href="/" class="">
+          Home
+        </a>
+        
+        <a href="/archives" class="">
+          Archives
+        </a>
+        
+        <a href="/categories" class="">
+          Categories
+        </a>
+        
+        <a href="/tags" class="">
+          Tags
+        </a>
+        
+        <a href="/friends" class="">
+          Friends
+        </a>
+        
+        <a href="/about" class="">
+          About
+        </a>
+        
+      </div>
+    </div>
+    <div id="header">
+      <div class="intro">
+        <a href="/" class="logo" style="background-image: url('/images/logo.png')"></a>
+        <div class="author">lirc572</div>
+      </div>
+      <div class="nav">
+        <span class="iconfont icon-menu menu-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+    </div>
+    <div id="side" class="animated bounceInLeft">
+      <div class="shrink">
+        <a href="/" class="logo" style="background-image: url('/images/logo.png')"></a>
+        <span class="iconfont icon-menu toggle-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+      <div class="magnify">
+        <div class="about">
+          <div class="author">lirc572</div>
+          <a href="/" class="logo" style="background-image: url('/images/logo.png')"></a>
+        </div>
+
+        <div class="nav">
+          
+          <a href="/" class="">
+            Home
+          </a>
+          
+          <a href="/archives" class="">
+            Archives
+          </a>
+          
+          <a href="/categories" class="">
+            Categories
+          </a>
+          
+          <a href="/tags" class="">
+            Tags
+          </a>
+          
+          <a href="/friends" class="">
+            Friends
+          </a>
+          
+          <a href="/about" class="">
+            About
+          </a>
+          
+          <a href="#" class="search-box">
+            <span class="iconfont icon-sousuo"></span>
+          </a>
+        </div>
+        <div class="bottom">
+          <div class="follow">
+            
+            <a href="https://github.com/lirc572" target="_block">
+              <span class="iconfont icon-github"></span>
+            </a>
+             
+            <a href="/atom.xml" target="_block">
+              <span class="iconfont icon-rss"></span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="main animated bounceInRight delay-0.7s">
+        <article class="post-entry">
+    <div class="header">
+      
+      <div class="title">C Programming Notes</div>
+      <div class="meta">
+        <span class="item">
+          <span class="iconfont icon-time-circle"></span>
+          <span>2020/02/03</span>
+        </span>
+
+        
+          <span class="item leancloud-visitors" id="/2020/02/03/C-Programming-Notes/" data-flag-title="C Programming Notes">
+            <span class="iconfont icon-eye1"></span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+
+         
+        <span class="item">
+          <span class="iconfont icon-folder"></span>
+          <span>
+              
+                
+                  <a href="/categories/Notes">Notes</a>
+                
+              
+          </span>
+        </span>
+        
+        
+         
+          <span class="item">
+            <span class="iconfont icon-tag1"></span>
+            <span>
+                
+                  
+                    <a href="/tags/programming">programming</a>
+                  
+                
+                  
+                    <a href="/tags/notes">notes</a>
+                  
+                
+                  
+                    <a href="/tags/C">C</a>
+                  
+                
+            </span>
+          </span>
+         
+      </div>
+      <div>
+      </div>
+    </div>
+    <h2 id="Determine-the-length-of-an-array">Determine the length of an array<a class="post-anchor" href="#Determine-the-length-of-an-array"></a></h2><p><a href="https://onlinegdb.com/ByhydiBGI" target="_blank" rel="noopener">Code 1</a></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> arr[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>&#125;;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The length of array a is %d\n"</span>, <span class="keyword">sizeof</span>(arr)/<span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Compile and run the code above and you should see the programming showing the correct array length (7).</p>
+<p>What about the following code?</p>
+<p><a href="https://onlinegdb.com/r1tzdsrMI" target="_blank" rel="noopener">Code 2</a></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">lengthOfIntArray</span><span class="params">(<span class="keyword">int</span> a[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">sizeof</span>(a) / <span class="keyword">sizeof</span>(<span class="keyword">int</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> arr[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>&#125;;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The length of array a is %d\n"</span>, lengthOfIntArray(arr));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>It gives an output of 2??? It turns out that the results of sizeof() are compile-time constants. In the first example, the compiler knows that <code>arr</code> is an array and correctly gives the number of bytes occupied by the array. However, in the second example, when the array <code>arr</code> is passed as a parameter to a function, it “decays” to a normal int pointer. Thus sizeof(a) in funtion <code>lengthOfIntArray()</code> gives the number of bytes occupied by an int pointer instead of the array.</p>
+<h2 id="Complex-Pointer-Declarations">Complex Pointer Declarations<a class="post-anchor" href="#Complex-Pointer-Declarations"></a></h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> * <span class="keyword">const</span> *(*next)()</span><br></pre></td></tr></table></figure>
+
+<p>(算法竞赛入门经典（第二版）)</p>
+<p>What is the type of <code>next</code> in the above declaration?</p>
+<p>To evaluate the declaration, we:</p>
+<ol>
+<li>start from the identifier being declared</li>
+<li>go right until the closing bracket is met, then go left</li>
+<li>Continue until the whole declaration has been evaluated</li>
+</ol>
+<p>In the above example, we start from the identifier <code>next</code>. Since there is nothing on its right, we go left and find <code>*</code>. We then come out of the bracket and find <code>()</code> on the right. Then, we find <code>*</code>, <code>const</code>, <code>*</code>, <code>char</code> one by one. The result is shown below:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">next * () * <span class="keyword">const</span> * <span class="keyword">char</span></span><br></pre></td></tr></table></figure>
+
+<p>It is interpreted as “next is a pointer to a function (which takes no parameter) which returns a pointer to a constant pointer to a char variable”.</p>
+<h2 id="Pointer-Arithmetic">Pointer Arithmetic<a class="post-anchor" href="#Pointer-Arithmetic"></a></h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *ptr;</span><br><span class="line">ptr++;</span><br></pre></td></tr></table></figure>
+
+<p>When incrementing an int pointer <code>ptr</code>, it will increase by <strong>4</strong> (sizeof(int)).</p>
+<h2 id="Character-Literals">Character Literals<a class="post-anchor" href="#Character-Literals"></a></h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sizeof</span>(<span class="string">'c'</span>) == <span class="keyword">sizeof</span>(<span class="keyword">int</span>) == <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<p>In C, a character literal is an int.<br>(Note that in C++ character literals are of type char)</p>
+
+
+  
+    <div class="post-reward">
+    <div id="reward-button">Buy me ☕</div>
+      <div id="qr">
+        <div class="wrap">
+            
+            <div class="bg-wrap">
+              <a href="/images/mia_alipay.jpg" target="_block" class="bg" style="background-image:url('/images/mia_alipay.jpg')"></a>
+              Alipay
+            </div>
+            
+            
+            <div class="bg-wrap">
+                <a href="/images/mia_wechatpay.png" target="_block" class="bg" style="background-image:url('/images/mia_wechatpay.png')"></a>
+              Wechat
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  
+  <div class="post-guide">
+    <div class="item left">
+        
+    </div>
+    <div class="item right">
+        
+          <a href="/2019/12/23/Sipeed-Tang-Nano-Development-Environment-Setup/">Sipeed Tang Nano Development Environment Setup</a>
+        
+    </div>
+  </div>
+
+  
+
+  <div class="post-copyright">
+    <div class="auth">
+      Author：<a href="https://lirc572.github.io">lirc572</a>
+    </div>
+    <div class="link">
+      Permanent Link：<a href="https://lirc572.github.io/2020/02/03/C-Programming-Notes/">https://lirc572.github.io/2020/02/03/C-Programming-Notes/</a>
+    </div>
+  </div>
+
+  <audio id="music" controls  loop preload="auto" style="width:300px; margin: 10px auto;"><source src="https://5akk68wdz8qnp.cfc-execute.bj.baidubce.com/music/433223011.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+
+  <div id="comment"></div>
+
+  
+  
+</article>
+        <footer>
+          <div class="copyright">
+            ©2020
+            <a href="https://lirc572.github.io">lirc572</a> Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> |
+            <a href="https://github.com/shixiaohu2206/hexo-theme-huhu" target="_blank" rel="noopener">hexo-theme-huhu</a>
+          </div>
+          
+        </footer>
+      </div>
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </body>
+  
+</html>
+<script type="text/javascript">
+                  window.HUHU_CONFIG = JSON.parse("{\"share\":[\"weibo\",\"weixin\",\"qqkongjian\",\"QQ\",\"douban\",\"facebook\",\"twitter\",\"google\"],\"valine\":{\"API_ID\":\"aBJGiAWNEuP7aXAPvy8E2Wx3-gzGzoHsz\",\"API_KEY\":\"DeXWdUgrtsSiedk1taJPoKeT\"},\"service_worker\":{\"open\":false}}")
+                </script> <script type="text/javascript">window.addEventListener('load', function() {
+    
+    window.loadJs = function(d, m, a) {
+      var c = document.getElementsByTagName('head')[0] || document.head || document.documentElement
+      var b = document.createElement('script')
+      b.defer = true
+      b.setAttribute('type', 'text/javascript')
+      b.setAttribute('charset', 'UTF-8')
+      b.setAttribute('async', 'true')
+      b.setAttribute('src', d)
+      m && b.setAttribute('data-main', '/scripts/app-built')
+      if (typeof a === 'function') {
+        if (window.attachEvent) {
+          b.onreadystatechange = function() {
+            var e = b.readyState
+            if (e === 'loaded' || e === 'complete') {
+              b.onreadystatechange = null
+              a()
+            }
+          }
+        } else {
+          b.onload = a
+        }
+      }
+      c.appendChild(b)
+    }
+    window.loadJs && window.loadJs('https://cdn.bootcss.com/require.js/2.3.6/require.min.js', true, function() {require.config({"paths":{"util":"util","share":"share","search":"search","registerSW":"registerSW","valine":"cdn/Valine.min","av":["https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min"],"pjax":["https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min"],"jquery":["https://cdn.bootcss.com/jquery/3.4.1/jquery.min"],"confirm":["https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min"],"fancybox":["https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min"],"chart":["https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.bundle.min"]},"map":{"*":{"css":"https://cdn.bootcss.com/require-css/0.1.10/css.min.js"}},"shim":{"fancybox":{"deps":["css!https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css"]},"confirm":{"deps":["css!https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min.css"]},"chart":{"deps":["css!https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.min.css"]}},"waitSeconds":3})})
+  })</script> <script type="text/javascript">
+                  ;(function() {
+                    var bp = document.createElement('script')
+                    var curProtocol = window.location.protocol.split(':')[0]
+                    if (curProtocol === 'https') {
+                      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
+                    } else {
+                      bp.src = 'http://push.zhanzhang.baidu.com/push.js'
+                    }
+                    var s = document.getElementsByTagName('script')[0]
+                    s.parentNode.insertBefore(bp, s)
+                  })()
+                </script> 
