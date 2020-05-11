@@ -191,6 +191,10 @@ Go to `Device Configuration` and select `SRAM Mode` -> `SRAM Program and Verify`
 
 ![Device Configuration](/img/tang-nano-setup/device_configuration.png)
 
+{% blockquote %}
+in cable settings, change frequency to 2.5mhz manually (instead of using the default 2m)!!! Otherwise flashing to embedded flash won't work!
+{% endblockquote %}
+
 Click on Program/Configure, wait until the upload and verification process finished.
 
 ![Program/Configure](/img/tang-nano-setup/program_configure.png)
