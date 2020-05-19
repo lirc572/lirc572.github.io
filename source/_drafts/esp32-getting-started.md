@@ -44,14 +44,14 @@ Run the following commands to create directory and clone the ESP-IDF files.
 ```bash
 mkdir ~/esp
 cd ~/esp
-git clone --recursive https://github.com/espressif/esp-idf.git
+git clone --recursive https://github.com/espressif/esp-idf.git  #This takes very long...
 ```
 
 Install ESP-IDF (this will install the tools under ~/.espressif directory by default, to install to a different directory, set the environment variable `IDE_TOOLS_PATH` before running the script):
 
 ```bash
 cd ~/esp/esp-idf
-./install
+./install        #This also takes forever...
 ```
 
 Now the tools have been downloaded. To use the tools in command line, you need to set the environment variable `IDF_PATH` to `~/esp/esp-idf` and run `. ~/esp/esp-idf/export.sh` (do this every time you open a new terminal window)
