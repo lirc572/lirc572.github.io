@@ -1,0 +1,3 @@
+tasks:
+  - before: npm install hexo-cli -g
+  - init: npm install
