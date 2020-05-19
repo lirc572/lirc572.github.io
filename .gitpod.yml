@@ -1,0 +1,2 @@
+tasks:
+  - init: npm install hexo-cli -g && npm install && npm run build
